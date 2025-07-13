@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Internship Opportunity</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #ffffff);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      color: #333;
+    }
+
+    .container {
+      background-color: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      max-width: 700px;
+      width: 100%;
+      padding: 40px 35px;
+      transition: transform 0.3s;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    .container:hover {
+      transform: translateY(-5px);
+    }
+
+    .icon-box {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #2196f3, #21cbf3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      color: white;
+      margin: 0 auto 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 28px;
+      color: #1e2a38;
+      margin-bottom: 8px;
+    }
+
+    .tagline {
+      text-align: center;
+      color: #607d8b;
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+    .info-section {
+      background: #f9fbfc;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      border-left: 5px solid #2196f3;
+    }
+
+    .info-section p {
+      margin: 10px 0;
+      font-size: 15.5px;
+    }
+
+    .label {
+      font-weight: 600;
+      color: #37474f;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 25px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 26px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #3f51b5, #5c6bc0);
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.2s;
+      box-shadow: 0 6px 18px rgba(63, 81, 181, 0.3);
+    }
+
+    .btn:hover {
+      background: linear-gradient(135deg, #3949ab, #5c6bc0);
+      transform: translateY(-2px);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        padding: 30px 20px;
+      }
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="icon-box">🌐</div>
+
+    <h1>Exciting Internship Opportunity</h1>
+    <div class="tagline">Level up your skills with real-world web development projects</div>
+
+    <div class="info-section">
+      <p><span class="label">Company:</span> ABC Tech Solutions</p>
+      <p><span class="label">Position:</span> Web Development Intern</p>
+      <p><span class="label">Duration:</span> 3 Months</p>
+      <p><span class="label">Mode:</span> Remote / Work from Home</p>
+    </div>
+
+    <div class="info-section">
+      <p><span class="label">About:</span> Join our dynamic development team and contribute to real client projects. This internship is perfect for those looking to sharpen their HTML, CSS, JavaScript, and teamwork skills while building a strong professional portfolio.</p>
+    </div>
+
+    <div class="buttons">
+      <a href="https://example.com/apply" class="btn">Apply Now</a>
+      <a href="https://example.com/details" class="btn">More Details</a>
+    </div>
+  </div>
+
+</body>
+</html>
