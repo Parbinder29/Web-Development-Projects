@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Registration Form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 500px;
+      background: #fff;
+      margin: 50px auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input[type="file"] {
+      padding: 5px;
+    }
+
+    .gender-group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+    }
+
+    .checkbox-group input {
+      margin-right: 10px;
+    }
+
+    #strength-bar {
+      height: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      background: #ddd;
+    }
+
+    .strength {
+      height: 10px;
+      border-radius: 5px;
+    }
+
+    .strength.weak {
+      width: 33%;
+      background: red;
+    }
+
+    .strength.medium {
+      width: 66%;
+      background: orange;
+    }
+
+    .strength.strong {
+      width: 100%;
+      background: green;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #218838;
+    }
+
+    @media (max-width: 600px) {
+      .gender-group {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>User Registration</h2>
+    <form>
+      <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" required>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" required onkeyup="checkStrength(this.value)">
+        <div id="strength-bar">
+          <div id="strength" class="strength"></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" required>
+      </div>
+      <div class="form-group">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" required>
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select id="gender" required>
+          <option value="">-- Select --</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="profilePic">Profile Picture:</label>
+        <input type="file" id="profilePic" accept="image/*">
+      </div>
+      <div class="form-group checkbox-group">
+        <input type="checkbox" id="terms" required>
+        <label for="terms">I agree to the Terms and Conditions</label>
+      </div>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+  <script>
+    function checkStrength(password) {
+      const strengthBar = document.getElementById("strength");
+      if (!password) {
+        strengthBar.className = "strength";
+        return;
+      }
+
+      let strength = 0;
+      if (password.length >= 8) strength++;
+      if (/[A-Z]/.test(password)) strength++;
+      if (/[0-9]/.test(password)) strength++;
+      if (/[\W]/.test(password)) strength++;
+
+      if (strength <= 1) {
+        strengthBar.className = "strength weak";
+      } else if (strength === 2 || strength === 3) {
+        strengthBar.className = "strength medium";
+      } else {
+        strengthBar.className = "strength strong";
+      }
+    }
+  </script>
+
+</body>
+</html>
