@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Parbinder Singh - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f0f2f5;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1c1c1c, #333);
+      color: white;
+      text-align: center;
+      padding: 50px 20px 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    header img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      margin-bottom: 15px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    header img:hover {
+      transform: scale(1.05);
+    }
+
+    header h1 {
+      margin: 10px 0 8px;
+      font-size: 32px;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 18px;
+      color: #ccc;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    section {
+      background: white;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+    }
+
+    section h2 {
+      color: #007bff;
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    section h3 {
+      margin-top: 15px;
+      font-size: 18px;
+      color: #444;
+    }
+
+    ul {
+      padding-left: 20px;
+      line-height: 1.8;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 600px) {
+      header img {
+        width: 110px;
+        height: 110px;
+      }
+
+      header h1 {
+        font-size: 24px;
+      }
+
+      main {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <!-- Your uploaded image goes here -->
+    <img src=""C:\Users\Acer\Downloads\PS.jpg"" alt="Parbinder Singh">
+    <h1>Parbinder Singh</h1>
+    <p>Computer Science Student | NCC Cadet | Tech Enthusiast</p>
+  </header>
+
+  <main>
+    <!-- About Me Section -->
+    <section>
+      <h2>About Me</h2>
+      <p>
+        My name is Parbinder Singh, a third-year B.Tech student in Computer Science and Engineering at the Central University of Jammu. 
+        I am originally from Jammu. I have a strong foundation in programming and an enthusiasm for emerging technologies. 
+        I’m passionate, disciplined, a quick learner, and a proud NCC cadet. Outside of tech, I enjoy playing football, bodybuilding, and table tennis.
+      </p>
+    </section>
+
+    <!-- Skills and Interests -->
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li>C, C++, Python</li>
+        <li>MySQL</li>
+        <li>IoT with Arduino, Raspberry Pi, ESP32</li>
+      </ul>
+
+      <h2>Interests</h2>
+      <ul>
+        <li>Artificial Intelligence & Machine Learning</li>
+        <li>Web Development</li>
+        <li>Data Science</li>
+      </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section>
+      <h2>Projects</h2>
+
+      <h3>Smart Water Irrigation System</h3>
+      <p>Automated irrigation system using moisture sensors and IoT devices to optimize water usage.</p>
+
+      <h3>Garbage Classification AI Model</h3>
+      <p>Developed an AI model to classify garbage for automated waste management.</p>
+
+      <h3>Basic Web Projects</h3>
+      <p>Created small web projects to explore HTML, CSS, and JavaScript for frontend development.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section>
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:parbinders594@gmail.com">parbinders594@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/parbinder-singh-323792357" target="_blank">linkedin.com/in/parbinder-singh</a></p>
+      <p>GitHub: <a href="https://github.com/Parbinder29" target="_blank">github.com/Parbinder29</a></p>
+    </section>
+  </main>
+
+</body>
+</html>
